@@ -22,7 +22,7 @@ func main() {
 func runContainer(imageRef string) error {
 	ctx := context.Background()
 
-	dc, err := client.NewClientWithOpts()
+	dc, err := client.NewEnvClient()
 	if err != nil {
 		return errors.Wrap(err, "error creating docker client")
 	}
